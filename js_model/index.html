@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection with MobileNet SSD COCO</title>
+    <!-- Import TensorFlow.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <!-- Import COCO-SSD model library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    <style>
+        /* Center the video and canvas elements */
+        video, canvas {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        canvas {
+            z-index: 1; /* Make sure the canvas is on top */
+        }
+    </style>
+</head>
+<body>
+    <!-- Video element to show the webcam feed -->
+    <video id="webcam" autoplay playsinline width="640" height="480"></video>
+    <!-- Canvas element to draw the bounding boxes and labels -->
+    <canvas id="overlay" width="640" height="480"></canvas>
+    <!-- Include the JavaScript file -->
+    <script src="app.js"></script>
+</body>
+</html>
